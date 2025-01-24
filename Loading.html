@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background:black;
+}
+span{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background: blue;
+    font-size: 70px;
+    font-family: 'Algerian';
+    /* font-weight: bold; //METTRE EN GRAS*/ 
+    text-align: center;
+    color: white;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(1s*(var(--i)));
+    -webkit-box-reflect: below 4px linear-gradient(transparent,black);
+}
+@keyframes animate{
+    0%{
+        background: red;
+        transform: translateY(0px);
+        transform: translateY(50px);
+    }
+    35%{
+        background: blue;
+        transform: translateY(50px);
+    }
+    65%{
+        background: green;
+        transform: translateY(0px);
+    }
+    100%{
+        background: red;
+        transform: translateY(0px);
+        transform: translateY(50px);
+    }
+}
+</style>
+<body>
+    <div class="">
+        <span style="--i:1">L</span>
+        <span style="--i:2">O</span>
+        <span style="--i:3">A</span>
+        <span style="--i:4">D</span>
+        <span style="--i:5">I</span>
+        <span style="--i:6">N</span>
+        <span style="--i:7">G</span>
+    </div>
+</body>
+</html>
